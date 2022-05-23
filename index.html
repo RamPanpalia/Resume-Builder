@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="Assets\letterhead.svg">
+    <title>Resume Builder</title>
+</head>
+<body>
+    <div class="main">
+        <div class="Q Q1">
+            <h1>Personal Details</h1>
+            <div class="q q1">
+                <label for="name" >Given Name</label>
+                <input for="fname" type="text">
+            </div>
+            <div class="q q2">
+                <label for="name" >Family Name</label>
+                <input for="lname" type="text">
+            </div>
+        </div>
+        <div class="Q Q2">
+            <h1>Contact</h1>
+            <div class="q q3">
+                <label for="name" >Address</label>
+                <input type="text" >
+            </div>
+            <div class="q q4">
+                <label for="name" >Post Code</label>
+                <input type="number" >
+            </div>
+            <div class="q q5">
+                <label for="name" >City</label>
+                <input type="text" >
+            </div>
+            <div class="q q6">
+                <label for="name" >Phone Number</label>
+                <input type="tel">
+            </div>
+            <div class="q q7">
+                <label for="name" >E-mail Address</label>
+                <input type="email" >
+            </div>
+        </div>
+        <div class="Q Q3">
+            <h1>Professional Summary</h1>
+            <div class="q q8">
+                <textarea name="" id=""></textarea>
+            </div>
+        </div>
+        <div class="Q Q4">
+            <h1>Work Details</h1>
+            <div class="q9">
+                <hr width="90%">
+                1.
+                <!-- <div class="q q9-1">
+                    <label for="name" >Work History</label>
+                    <input type="text" >
+                </div> -->
+                <div class="q q9-2">
+                    <label for="name" >Position</label>
+                    <input type="text" >
+                </div>
+                <div class="q q9-3">
+                    <label for="name" >Duration : </label>
+                    <label for="name">Start Date</label>
+                    <input type="date">
+                    <label class="edl1" for="name" > - End Date</label>
+                    <input class="edi1" type="date">
+                    <span class="current">
+                        <input class="cbx1" type="checkbox" onchange="checkbox_end_date(1)" placeholder="Current">
+                        Current
+                    </span>
+                    
+                </div>
+                <div class="q q9-4">
+                    <label for="name" >Place of Work</label>
+                    <input type="text" >
+                </div>
+                <div class="q q9-5">
+                    <label for="name" >Description</label>
+                    <input type="text" >
+                </div>
+            </div>
+            <button class="add addWork" onclick="addWork()">
+                Add Work +
+            </button>
+            <!-- q9 is basic template we will repeat it according to user need -->
+        </div>
+        <div class="Q Q5">
+            <h1>Skills</h1>
+            <span class="q q10">
+                <input type="text" >
+            </span>
+            <button class="add addSkill" onclick="addSkill()">
+                Add Skill +
+            </button>
+        </div>
+        <div class="Q Q6">
+            <h1>Education</h1>
+            <div class="q11">
+                <hr width="90%">
+                1.
+                <div class="q q11-1">
+                    <label for="name">Education</label>
+                    <input type="text" placeholder="e.g BE Computer Science">
+                </div>
+                <div class="q q11-2">
+                    <label for="name" >School/College</label>
+                    <input type="text">
+                </div>
+                <div class="q q11-3">
+                    <label for="name" >City</label>
+                    <input type="text">
+                </div>
+                <div class="q q11-4">
+                    <label for="name" >Duration : </label>
+                    <label for="name">Start Date</label>
+                    <input type="date">
+                    <label class="edl2" for="name" > - End Date</label>
+                    <input class="edi2" type="date">
+                    <span class="current">
+                        <input class="cbx2" type="checkbox" onchange="checkbox_end_date(2)" placeholder="Current">
+                        Current
+                    </span>
+                </div>
+            </div>
+            <button class="add addEducation" onclick="addEducation()">
+                Add Education +
+            </button>
+        </div>
+        <div class="Q Q7">
+            <h1>Affiliation</h1>
+            <div class="q q12">
+                <div class="point">
+                    • <input type="text" class="inputa">
+                </div>
+            </div>
+            <button class="add addAffiliation" onclick="addAffiliation()">
+                Add Point +
+            </button>
+        </div>
+
+        <button class="generate">Generate</button>
+
+    </div>
+
+<!-- template -->
+
+<div class="Resume1">
+    <div class="left">
+        <div class="name">YOUR NAME</div>
+        <hr>
+        <div class="professionalsummary std1">
+            <h1>PROFESSIONAL SUMMARY</h1>
+            <!-- <hr> -->
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sequi maxime quod esse beatae dolorum placeat blanditiis vel. Excepturi est, iusto enim placeat ex dicta explicabo nobis. Incidunt cum totam aliquam neque voluptatem asperiores, voluptate deserunt placeat. Dicta officia eligendi, debitis, distinctio possimus nobis at tenetur quia veritatis architecto, tempore nulla? Accusantium, reprehenderit nam inventore ea, similique nesciunt porro ipsam quas recusandae rerum sapiente facere quasi, soluta eos assumenda iste.
+            </p>
+        </div>
+        <div class="workhistory std1">
+            <h1>WORK HISTORY</h1>
+            <!-- <hr> -->
+            <div class="wh">
+                <div class="std2">
+                    <span>POSITION, </span> 08/04/2003, <br>
+                    address Lorem ipsum dolor sit amet.
+                </div>
+                <div class="std3">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae .</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wh">
+                <div class="std2">
+                    <span>POSITION, </span> 08/04/2003, <br>
+                    address Lorem ipsum dolor sit amet.
+                </div>
+                <div class="std3">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae .</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wh">
+                <div class="std2">
+                    <span>POSITION, </span> 08/04/2003, <br>
+                    address Lorem ipsum dolor sit amet.
+                </div>
+                <div class="std3">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae .</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="contacts">
+            <div class="cstd1">
+                <img src="Assets\pin_drop.svg" alt="">
+                Lorem, ipsum dolor-111111.
+            </div>
+            <div class="cstd1">
+                <img src="Assets\android_dialer.svg" alt="">
+                (555)-55-5555
+            </div>
+            <div class="cstd1">
+                <img src="Assets\mail.svg" alt="">
+                example@emample.com
+            </div>
+        </div>
+        <div class="skills">
+            <h1>SKILLS</h1>
+            <div class="cstd2">
+                <ul>
+                    <li>Solutions Development</li>
+                    <li>Virtualization Technologies</li>
+                    <li>Software Applications</li>
+                    <li>Database Configration</li>
+                    <li>Software Platforms</li>
+                    <li>Solution Mock-ups</li>
+                </ul>
+            </div>
+        </div>
+        <div class="education">
+            <h1>EDUCATION</h1>
+            <div class="cstd3">
+                <b>Degree</b>
+                <p>Place</p>
+                <p>Duration</p>
+            </div>
+        </div>
+        <div class="affiliation">
+            <h1>AFFILIATION</h1>
+            <div class="cstd2">
+                <ul>
+                    <li>Indian Society of Civil Engineers (ISCE)</li>
+                    <li>Association of Information Technology Professionals</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="index.js"></script>
+</html>
