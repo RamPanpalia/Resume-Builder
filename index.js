@@ -1,7 +1,7 @@
-var i=1;
-var j=1;
-var k=1;
-var l=1;
+var i=1;//for work
+var j=1;//for education
+var k=1;//for skill
+var l=1;//for affiliation
 document.querySelectorAll('checkbox').checked=false;
 function checkbox_end_date(x){
     if(document.querySelector('.cbx'+x).checked==true){
@@ -60,15 +60,25 @@ function addWork(){
 }
 
 function addSkill(){
+    k++;
     let newNode=document.createElement("span");
     newNode.classList.add("q10");
     newNode.classList.add("q");
     newNode.innerHTML=`
-        <input type="text">
+        <input type="text" class="skilltemp" id="skill${k}">
     `;
     let addBtn=document.querySelector('.addSkill');
     let Q5=document.querySelector('.Q5');
     Q5.insertBefore(newNode,addBtn);
+}
+
+document.getElementById("skillin").onchange=function(){
+    document.getElementById("skillout").innerHTML="";
+    for(var u=1;u<=k;u++){
+        document.getElementById("skillout").innerHTML+=`
+        <li>${document.getElementById("skill"+u).value}</li>
+        `;
+    }
 }
 
 function addEducation(){
@@ -118,4 +128,27 @@ function addAffiliation(){
     let addBtn=document.querySelector('.addAffiliation');
     let Q7=document.querySelector('.Q7');
     Q7.insertBefore(newNode,addBtn);
+}
+
+document.getElementById("fnInput").onchange=function(){
+    document.getElementById("name").innerHTML=document.getElementById("fnInput").value + " " +document.getElementById("lnInput").value;
+}
+document.getElementById("lnInput").onchange=function(){
+    document.getElementById("name").innerHTML=document.getElementById("fnInput").value + " " +document.getElementById("lnInput").value;
+}
+document.getElementById("profsumm").onchange=function(){
+    document.getElementById("profsummout").innerHTML=document.getElementById("profsumm").value;
+    document.getElementById("profsummout").style.fontFamily=" 'Saira', sans-serif";
+}
+document.querySelector('.q3-3').onchange=function(){
+    document.getElementById("addressout").innerHTML=document.getElementById("address1").value+", "+document.getElementById("address2").value+"-"+document.getElementById("address3").value;
+    document.getElementById("addressout").style.fontFamily=" 'Saira', sans-serif";
+}
+document.querySelector('.q6').onchange=function(){
+    document.getElementById("phoneout").innerHTML=document.getElementById("phonein").value;
+    document.getElementById("phoneout").style.fontFamily=" 'Saira', sans-serif";
+}
+document.querySelector('.q7').onchange=function(){
+    document.getElementById("emailout").innerHTML=document.getElementById("emailin").value;
+    document.getElementById("emailout").style.fontFamily=" 'Saira', sans-serif";
 }
