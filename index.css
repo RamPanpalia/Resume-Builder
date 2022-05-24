@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Saira:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Saira:wght@300;600&display=swap');
 
 *{
     padding: 0;
@@ -54,30 +56,47 @@ textarea{
 .add{
     /* height: 2em; */
     max-width: 10em;
-    padding: 3px;
+    padding: 3px 7px;
     margin: 10px;
     text-align: center;
     border: 2px solid gray;
     border-radius: 3px;
     background-color: rgb(225, 225, 225);
+    background-color: white;
 }
 .add img{
     height: 20px;
 }
 
+/* .main{
+    display: none;
+} */
 .Resume1{
-    margin: 20px;
-    margin-top: 100px;
-    min-height: 220vh;
+    /* margin: 20px; */
+    /* margin-top: 100px; */
+    min-height: 150vh;
     min-width: 10vh;
     border: 2px solid black;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    font-family: 'Saira', sans-serif !important;
 }
+.name{
+    font-family: 'Saira', sans-serif;
+}
+.Resume1 h1{
+    font-family: 'Saira', sans-serif;
+} 
+.Resume1 li,.education p,b{
+    font-family: 'Saira', sans-serif;
+    font-weight: 300;
+}
+
 .Resume1 .left h1{
     font-weight: 900;
     border-bottom: 1px solid black;
-    margin: 35px 0 25px 0;
+    margin: 32px 0 25px 0;
+    color: #5b6b7a;
 }
 .Resume1 .right h1{
     font-weight: 900;
@@ -92,6 +111,7 @@ textarea{
     text-align: center;
     font-size: 40px;
     font-weight: 900;
+    color: #5b6b7a;
 }
 /* .left .std1{
     margin-top: 30px;
@@ -108,7 +128,7 @@ textarea{
     margin-bottom: 1.5em;
 }
 .right{
-    background-color: rgb(67, 53, 169);
+    background-color: #5b6b7a;
     color: white;
     padding: 2em 2em;
 }
