@@ -14,40 +14,42 @@
             <h1>Personal Details</h1>
             <div class="q q1">
                 <label for="name" >Given Name</label>
-                <input for="fname" type="text">
+                <input for="fname" id="fnInput" type="text">
             </div>
             <div class="q q2">
                 <label for="name" >Family Name</label>
-                <input for="lname" type="text">
+                <input for="lname" id="lnInput" type="text">
             </div>
         </div>
         <div class="Q Q2">
             <h1>Contact</h1>
-            <div class="q q3">
-                <label for="name" >Address</label>
-                <input type="text" >
-            </div>
-            <div class="q q4">
-                <label for="name" >Post Code</label>
-                <input type="number" >
-            </div>
-            <div class="q q5">
-                <label for="name" >City</label>
-                <input type="text" >
+            <div class="q3-3">
+                <div class="q q3">
+                    <label for="name">Address</label>
+                    <input type="text" id="address1">
+                </div>
+                <div class="q q4">
+                    <label for="name">Post Code</label>
+                    <input type="number" id="address3">
+                </div>
+                <div class="q q5">
+                    <label for="name">City</label>
+                    <input type="text" id="address2">
+                </div>
             </div>
             <div class="q q6">
                 <label for="name" >Phone Number</label>
-                <input type="tel">
+                <input type="tel" id="phonein">
             </div>
             <div class="q q7">
                 <label for="name" >E-mail Address</label>
-                <input type="email" >
+                <input type="email" id="emailin">
             </div>
         </div>
         <div class="Q Q3">
             <h1>Professional Summary</h1>
             <div class="q q8">
-                <textarea name="" id=""></textarea>
+                <textarea name="" id="profsumm"></textarea>
             </div>
         </div>
         <div class="Q Q4">
@@ -89,10 +91,10 @@
             </button>
             <!-- q9 is basic template we will repeat it according to user need -->
         </div>
-        <div class="Q Q5">
+        <div class="Q Q5" id="skillin">
             <h1>Skills</h1>
             <span class="q q10">
-                <input type="text" >
+                <input type="text" class="skilltemp" id="skill1">
             </span>
             <button class="add addSkill" onclick="addSkill()">
                 Add Skill +
@@ -143,21 +145,23 @@
             </button>
         </div>
 
-        <button class="generate">Generate</button>
+        <!-- <button class="generate">Generate</button> -->
 
+        <p style="text-align: center;">Look Below your Resumes are Ready!😉</p>
+        <!-- <hr> -->
     </div>
 
 <!-- template -->
 
 <div class="Resume1">
     <div class="left">
-        <div class="name">YOUR NAME</div>
+        <div class="name" id="name">YOUR NAME</div>
         <hr>
         <div class="professionalsummary std1">
             <h1>PROFESSIONAL SUMMARY</h1>
             <!-- <hr> -->
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sequi maxime quod esse beatae dolorum placeat blanditiis vel. Excepturi est, iusto enim placeat ex dicta explicabo nobis. Incidunt cum totam aliquam neque voluptatem asperiores, voluptate deserunt placeat. Dicta officia eligendi, debitis, distinctio possimus nobis at tenetur quia veritatis architecto, tempore nulla? Accusantium, reprehenderit nam inventore ea, similique nesciunt porro ipsam quas recusandae rerum sapiente facere quasi, soluta eos assumenda iste.
+            <p id="profsummout">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sequi maxime quod esse beatae dolorum placeat blanditiis vel. Excepturi est, iusto enim placeat ex dicta explicabo nobis. Incidunt cum totam aliquam 
             </p>
         </div>
         <div class="workhistory std1">
@@ -165,40 +169,40 @@
             <!-- <hr> -->
             <div class="wh">
                 <div class="std2">
-                    <span>POSITION, </span> 08/04/2003, <br>
+                    <span>Position, </span> 08/04/2003, <br>
                     address Lorem ipsum dolor sit amet.
                 </div>
                 <div class="std3">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae .</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod </li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat .</li>
+                        <li>Lorem ipsum consectetur adipisicing elit. quod  eaque asperiores libero natus beatae .</li>
                     </ul>
                 </div>
             </div>
             <div class="wh">
                 <div class="std2">
-                    <span>POSITION, </span> 08/04/2003, <br>
+                    <span>Position, </span> 08/04/2003, <br>
                     address Lorem ipsum dolor sit amet.
                 </div>
                 <div class="std3">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae .</li>
+                        <li>Lorem  dolor sit amet  adipisicing elit. Quaerat maiores quod  eaque asperiores libero natus  </li>
+                        <li>Lorem ipsum dolor sit amet elit. Quaerat maiores quod  eaque asperiores libero natus.</li>
+                        <li>Lorem ipsum dolor sit amet  adipisicing elit. Quaerat eaque asperiores libero beatae .</li>
                     </ul>
                 </div>
             </div>
             <div class="wh">
                 <div class="std2">
-                    <span>POSITION, </span> 08/04/2003, <br>
+                    <span>Position, </span> 08/04/2003, <br>
                     address Lorem ipsum dolor sit amet.
                 </div>
                 <div class="std3">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque asperiores libero natus consectetur beatae .</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod consequuntur eaque </li>
+                        <li>Lorem ipsum dolor amet  adipisicing elit. aiores quod consequuntur eaque asperiores libero natus.</li>
+                        <li>Lorem ipsum dolor sit amet  adipisicing elit. Quaerat maiores quod consequuntur libero natus .</li>
                     </ul>
                 </div>
             </div>
@@ -208,21 +212,21 @@
         <div class="contacts">
             <div class="cstd1">
                 <img src="Assets\pin_drop.svg" alt="">
-                Lorem, ipsum dolor-111111.
+                <span id="addressout">Lorem, ipsum dolor-111111.</span>
             </div>
             <div class="cstd1">
                 <img src="Assets\android_dialer.svg" alt="">
-                (555)-55-5555
+                <span id="phoneout">(555)-55-5555</span>
             </div>
             <div class="cstd1">
                 <img src="Assets\mail.svg" alt="">
-                example@emample.com
+                <span id="emailout">example@emample.com</span>
             </div>
         </div>
         <div class="skills">
             <h1>SKILLS</h1>
             <div class="cstd2">
-                <ul>
+                <ul id="skillout">
                     <li>Solutions Development</li>
                     <li>Virtualization Technologies</li>
                     <li>Software Applications</li>
