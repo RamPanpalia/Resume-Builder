@@ -9,6 +9,9 @@
     <title>Resume Builder</title>
 </head>
 <body>
+    <div class="tittle" style="background-color:rgb(0, 0, 0);z-index: 2;">
+        <p style="text-align: center;padding:20px;color:white;">Resume Builder</p>
+    </div>
     <div class="main">
         <div class="Q Q1">
             <h1>Personal Details</h1>
@@ -61,29 +64,34 @@
                     <label for="name" >Work History</label>
                     <input type="text" >
                 </div> -->
-                <div class="q q9-2">
+                <div class="q q9-2" id="in-whp-1">
                     <label for="name" >Position</label>
-                    <input type="text" >
+                    <input type="text" id="inp-whpo-1">
                 </div>
-                <div class="q q9-3">
+                <div class="q q9-3" id="in-whd-1">
                     <label for="name" >Duration : </label>
                     <label for="name">Start Date</label>
-                    <input type="date">
+                    <input type="date" id="inp-whdus-1">
                     <label class="edl1" for="name" > - End Date</label>
-                    <input class="edi1" type="date">
+                    <input class="edi1" type="date" id="inp-whdue-1">
                     <span class="current">
                         <input class="cbx1" type="checkbox" onchange="checkbox_end_date(1)" placeholder="Current">
                         Current
                     </span>
-                    
                 </div>
-                <div class="q q9-4">
+                <div class="q q9-4" id="in-wha-1">
                     <label for="name" >Place of Work</label>
-                    <input type="text" >
+                    <input type="text" id="inp-whpl-1">
                 </div>
-                <div class="q q9-5">
+                <div class="q q9-5" id="in-whdes-1">
                     <label for="name" >Description</label>
-                    <input type="text" >
+                    <ul class="desclass1">
+                        <li><input type="text" id="inp-whdes-1-1"></li>
+                        <div class="dummy"></div>
+                    </ul>
+                    <button class="add addPointWD" onclick="addli(1)">
+                        Add Point +
+                    </button>
                 </div>
             </div>
             <button class="add addWork" onclick="addWork()">
@@ -107,24 +115,24 @@
                 1.
                 <div class="q q11-1">
                     <label for="name">Education</label>
-                    <input type="text" placeholder="e.g BE Computer Science">
+                    <input id="in-edude1" type="text" placeholder="e.g BE Computer Science">
                 </div>
                 <div class="q q11-2">
                     <label for="name" >School/College</label>
-                    <input type="text">
+                    <input id="in-edupn1" type="text">
                 </div>
                 <div class="q q11-3">
                     <label for="name" >City</label>
-                    <input type="text">
+                    <input id="in-edupc1" type="text">
                 </div>
                 <div class="q q11-4">
                     <label for="name" >Duration : </label>
                     <label for="name">Start Date</label>
-                    <input type="date">
-                    <label class="edl2" for="name" > - End Date</label>
-                    <input class="edi2" type="date">
+                    <input id="in-edudus1" type="date">
+                    <label class="eedl1" for="name" > - End Date</label>
+                    <input id="in-edudue1" class="eedi1" type="date">
                     <span class="current">
-                        <input class="cbx2" type="checkbox" onchange="checkbox_end_date(2)" placeholder="Current">
+                        <input class="ecbx1" type="checkbox" onchange="checkbox_end_datee(1)" placeholder="Current">
                         Current
                     </span>
                 </div>
@@ -135,9 +143,10 @@
         </div>
         <div class="Q Q7">
             <h1>Affiliation</h1>
+
             <div class="q q12">
                 <div class="point">
-                    • <input type="text" class="inputa">
+                    • <input id="affill1" type="text" class="inputa">
                 </div>
             </div>
             <button class="add addAffiliation" onclick="addAffiliation()">
@@ -147,13 +156,13 @@
 
         <!-- <button class="generate">Generate</button> -->
 
-        <p style="text-align: center;">Look Below your Resumes are Ready!😉</p>
+        <p style="text-align: center;">Fill the data and Look Below your Resumes are Ready!😉</p>
         <!-- <hr> -->
     </div>
 
-<!-- template -->
+<!-- templates -->
 
-<div class="Resume1">
+<div class="Resume1" id="res">
     <div class="left">
         <div class="name" id="name">YOUR NAME</div>
         <hr>
@@ -167,33 +176,49 @@
         <div class="workhistory std1">
             <h1>WORK HISTORY</h1>
             <!-- <hr> -->
-            <div class="wh">
-                <div class="std2">
-                    <span>Position, </span> 08/04/2003, <br>
-                    address Lorem ipsum dolor sit amet.
+            <div class="who">
+                <div class="wh o-wh" id="o-wh-1">
+                    <div class="std2">
+                        <span class="o-whp" id="o-whp-1">Position, </span><span class="o-whd" id="o-whd-1"> 08/04/2003, </span><br>
+                        <span class="o-wha" id="o-wha-1"> address Lorem ipsum dolor sit amet.</span>
+                    </div>
+                    <div class="std3">
+                        <ul id="o-whde-ul-1">
+                            <li id="o-whde-li-1-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod </li>
+                            <li id="o-whde-li-1-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat .</li>
+                            <li id="o-whde-li-1-3">Lorem ipsum consectetur adipisicing elit. quod  eaque asperiores libero natus beatae .</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="std3">
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod </li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat .</li>
-                        <li>Lorem ipsum consectetur adipisicing elit. quod  eaque asperiores libero natus beatae .</li>
-                    </ul>
+                <div class="wh o-wh" id="o-wh-2">
+                    <div class="std2">
+                        <span class="o-whp" id="o-whp-2">Position, </span><span class="o-whd" id="o-whd-2"> 08/04/2003, </span><br>
+                        <span class="o-wha" id="o-wha-2"> address Lorem ipsum dolor sit amet.</span>
+                    </div>
+                    <div class="std3">
+                        <ul id="o-whde-ul-2">
+                            <li id="o-whde-li-2-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod </li>
+                            <li id="o-whde-li-2-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat .</li>
+                            <li id="o-whde-li-2-3">Lorem ipsum consectetur adipisicing elit. quod  eaque asperiores libero natus beatae .</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wh o-wh" id="o-wh-3">
+                    <div class="std2">
+                        <span class="o-whp" id="o-whp-3">Position, </span>
+                        <span class="o-whd" id="o-whd-3"> 08/04/2003, </span><br>
+                        <span class="o-wha" id="o-wha-3"> address Lorem ipsum dolor sit amet.</span>
+                    </div>
+                    <div class="std3">
+                        <ul id="o-whde-ul-3">
+                            <li id="o-whde-li-3-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maiores quod </li>
+                            <li id="o-whde-li-3-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat .</li>
+                            <li id="o-whde-li-3-3">Lorem ipsum consectetur adipisicing elit. quod  eaque asperiores libero natus beatae .</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="wh">
-                <div class="std2">
-                    <span>Position, </span> 08/04/2003, <br>
-                    address Lorem ipsum dolor sit amet.
-                </div>
-                <div class="std3">
-                    <ul>
-                        <li>Lorem  dolor sit amet  adipisicing elit. Quaerat maiores quod  eaque asperiores libero natus  </li>
-                        <li>Lorem ipsum dolor sit amet elit. Quaerat maiores quod  eaque asperiores libero natus.</li>
-                        <li>Lorem ipsum dolor sit amet  adipisicing elit. Quaerat eaque asperiores libero beatae .</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="wh">
+            <!-- <div class="wh">
                 <div class="std2">
                     <span>Position, </span> 08/04/2003, <br>
                     address Lorem ipsum dolor sit amet.
@@ -205,7 +230,7 @@
                         <li>Lorem ipsum dolor sit amet  adipisicing elit. Quaerat maiores quod consequuntur libero natus .</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="right">
@@ -238,22 +263,29 @@
         </div>
         <div class="education">
             <h1>EDUCATION</h1>
-            <div class="cstd3">
-                <b>Degree</b>
-                <p>Place</p>
-                <p>Duration</p>
+            <div class="cstd3" id="cstd3-1">
+                <b id="edude1">Degree</b>
+                <p id="edup1">Place</p>
+                <p id="edudu1">Duration</p>
             </div>
         </div>
         <div class="affiliation">
             <h1>AFFILIATION</h1>
             <div class="cstd2">
-                <ul>
+                <ul id="affillout">
                     <li>Indian Society of Civil Engineers (ISCE)</li>
                     <li>Association of Information Technology Professionals</li>
                 </ul>
             </div>
         </div>
     </div>
+</div>
+
+<div class="hideit">
+    <div class="resume1_Download action_button" onclick="printPageArea()">
+        Download
+    </div>
+<div class="mrcs">More Resume Designs coming soon Stay Tuned!</div>
 </div>
 
 </body>
