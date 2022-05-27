@@ -5,6 +5,14 @@ var k=1;//for skill
 var l=1;//for affiliation
 var m=1;//for 
 document.querySelectorAll('checkbox').checked=false;
+function collapsePD(div){
+    if(document.querySelector(div).style.height=="40px"){
+        document.querySelector(div).style.height="auto";
+    }
+    else{
+        document.querySelector(div).style.height="40px";
+    }
+}
 function checkbox_end_date(x){
     if(document.querySelector('.cbx'+x).checked==true){
         document.querySelector('.edl'+x).style.opacity="0.25";
