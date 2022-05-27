@@ -12,9 +12,15 @@
     <div class="tittle" style="background-color:rgb(0, 0, 0);z-index: 2;">
         <p style="text-align: center;padding:20px;color:white;">Resume Builder</p>
     </div>
+    <div class="container">
     <div class="main">
         <div class="Q Q1">
-            <h1>Personal Details</h1>
+            <div class="head">
+                <h1>Personal Details</h1>
+                <div class="dropdown" onclick="collapsePD('.Q1')">
+                    <img src="Assets\expand_more.svg" alt="">
+                </div>
+            </div>
             <div class="q q1">
                 <label for="name" >Given Name</label>
                 <input for="fname" id="fnInput" type="text">
@@ -25,7 +31,13 @@
             </div>
         </div>
         <div class="Q Q2">
-            <h1>Contact</h1>
+            <div class="head">
+                <h1>Contact</h1>
+                <div class="dropdown" onclick="collapsePD('.Q2')">
+                    <img src="Assets\expand_more.svg" alt="">
+                </div>
+            </div>
+            
             <div class="q3-3">
                 <div class="q q3">
                     <label for="name">Address</label>
@@ -50,13 +62,24 @@
             </div>
         </div>
         <div class="Q Q3">
-            <h1>Professional Summary</h1>
+            <div class="head">
+                <h1>Professional Summary</h1>
+                <div class="dropdown" onclick="collapsePD('.Q3')">
+                    <img src="Assets\expand_more.svg" alt="">
+                </div>
+            </div>
+            
             <div class="q q8">
                 <textarea name="" id="profsumm"></textarea>
             </div>
         </div>
         <div class="Q Q4">
-            <h1>Work Details</h1>
+            <div class="head">
+                <h1>Work Details</h1>
+                <div class="dropdown" onclick="collapsePD('.Q4')">
+                    <img src="Assets\expand_more.svg" alt="">
+                </div>
+            </div>
             <div class="q9">
                 <hr width="90%">
                 1.
@@ -100,7 +123,12 @@
             <!-- q9 is basic template we will repeat it according to user need -->
         </div>
         <div class="Q Q5" id="skillin">
-            <h1>Skills</h1>
+            <div class="head">
+                <h1>Skills</h1>
+                <div class="dropdown" onclick="collapsePD('.Q5')">
+                    <img src="Assets\expand_more.svg" alt="">
+                </div>
+            </div>
             <span class="q q10">
                 <input type="text" class="skilltemp" id="skill1">
             </span>
@@ -109,7 +137,12 @@
             </button>
         </div>
         <div class="Q Q6">
-            <h1>Education</h1>
+            <div class="head">
+                <h1>Education</h1>
+                <div class="dropdown" onclick="collapsePD('.Q6')">
+                    <img src="Assets\expand_more.svg" alt="">
+                </div>
+            </div>
             <div class="q11">
                 <hr width="90%">
                 1.
@@ -142,8 +175,12 @@
             </button>
         </div>
         <div class="Q Q7">
-            <h1>Affiliation</h1>
-
+            <div class="head">
+                <h1>Affiliation</h1>
+                <div class="dropdown" onclick="collapsePD('.Q7')">
+                    <img src="Assets\expand_more.svg" alt="">
+                </div>
+            </div>
             <div class="q q12">
                 <div class="point">
                     • <input id="affill1" type="text" class="inputa">
@@ -280,17 +317,19 @@
         </div>
     </div>
 </div>
+</div>
 
 <div class="hideit">
     <div class="resume1_Download action_button" onclick="printPageArea()">
         Download
     </div>
 <div class="mrcs">More Resume Designs coming soon Stay Tuned!</div>
-<div class="credit" style="text-align:center;">
-    Designed and Created with ♥ By <a href="https://rampanpalia.github.io/">Ram Panpalia</a>
+<div class="credit">
+    Designed and Created with ♥ By <a href="rampanpalia.github.io">Ram Panpalia</a>
 </div>
 </div>
 
 </body>
 <script src="index.js"></script>
+<script src="index2.js"></script>
 </html>
